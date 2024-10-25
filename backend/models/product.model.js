@@ -32,3 +32,5 @@ isFeatured:{
 })
 
 const Product = mongoose.model("Product", prodcuctSchema);
+
+export default Product;

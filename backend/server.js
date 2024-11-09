@@ -8,11 +8,11 @@ import cartRoutes from './routes/cart.route.js';
 import couponRoutes from './routes/coupon.route.js';
 import paymentRoutes from './routes/payment.route.js';
 import analyticsRoutes from './routes/analytics.route.js';
-import { connectDB } from '../lib/db.js';
+import { connectDB } from './lib/db.js';
 
 dotenv.config();
 
-const app = express();
+const app = express({limit: '50mb'});
 
 const PORT = process.env.PORT || 5000;
 

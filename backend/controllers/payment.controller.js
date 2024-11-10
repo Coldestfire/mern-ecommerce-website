@@ -7,6 +7,7 @@ dotenv.config();
 
 export const createCheckoutSession = async (req, res) => {
 	try {
+		console.log(process.env.CLIENT_URL);
 		const { products, couponCode } = req.body;
 
 		if (!Array.isArray(products) || products.length === 0) {
